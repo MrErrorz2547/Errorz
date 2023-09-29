@@ -10,13 +10,7 @@ public class Test3 {
         obj.input_x();
         obj.input_y();
         obj.input_mode();
-        obj.selcet_mode(obj.mode);
-        /*1.ให้นักศึกษาเรียกใช้งาน method input_x และ input_y และ
-        input_mode จากนั้นให้แสดงผลลัพธ์ที่รับมาทางหน้าจอ 
-         2.
-
-         
-         */
+        obj.selcet_mode(obj.mode, obj.x, obj.y);
     }
     public void input_x(){
         Scanner scanner = new Scanner(System.in);
@@ -33,10 +27,38 @@ public class Test3 {
         System.out.print("input_mode:");
         mode = scanner.next().charAt(0);
     }
-    public void selcet_mode(char m){
+    public void selcet_mode(char m, int x, int y){
         System.out.println(m);
+        switch(m) {
+            case 'A':
+                System.out.println("ADD");
+                System.out.println("x + y = " + (x + y));
+                break;
+            case 'S':
+                System.out.println("SUB");
+                System.out.println("x - y = " + (x - y));
+                break;
+            case 'M':
+                System.out.println("MUL");
+                System.out.println("x * y = " + (x * y));
+                break;
+            case 'D':
+                System.out.println("DIV");
+                System.out.println("x / y = " + (x / y));
+                break;
+            default:
+                System.out.println("ไรวะ");
+                break;
+        }
+        }
+        
     }
-    //สร้าง method ที่รับค่า X int  ชื่อ input_x  
-    //สร้าง method ที่รับค่า Y int  ชื่อ input_y
-    //สร้าง method ที่รับค่า mode char ชื่อ input_mode
-}
+    /*ให้นักศึกษา เขียนการืทำงานภายใน select_mode
+    ให้รับค่า mode ,x , y
+    แบบบ swich case
+    กำหนดให้ ถ้า mode เป็น
+     A  ให้แสดงข้อความ ว่า ADD และแสดงค่า x y
+     S  ให้แสดงข้อความ ว่า SUB และแสดงค่า x y
+     M  ให้แสดงข้อความ ว่า MUL และแสดงค่า x y
+     D  ให้แสดงข้อความ ว่า DIV และแสดงค่า x y
+     */
