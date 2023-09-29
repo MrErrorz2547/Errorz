@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class ThirdClass {
+    public int x;
+    public int y; 
+    public char mode ;
+    public static void main(String[] args) {
+       ThirdClass obj = new ThirdClass();
+       obj.input_x();
+       obj.input_y();
+       obj.input_mode();
+    }  
+       public void input_x(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("input_x:");
+        x=scanner.nextInt();
+    }
+    public void input_y(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("input_y:");
+        y=scanner.nextInt(); 
+     
+    }
+    public void input_mode(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Select mode (A S M D): ");
+        System.out.print("mode: ");
+        mode = scanner.next().charAt(0);
+         switch (mode) {
+            case 'A':
+                int A = x + y;
+                System.out.println("Result: " + A);
+                break;
+            case 'S':
+                int B = x - y;
+                System.out.println("Result: " + B);
+                break;
+            case 'M':
+                int C = x * y;
+                System.out.println("Result: " + C);
+                break;
+            case 'D':
+                int D = x / y;
+            System.out.println("Result: " + D);
+            break;
+            default:
+                System.out.println("ขึ้นมาทำไม");
+                break;
+        }
+
+    }
+    
+
+}
